@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<web-app>
+	<display-name>Servlet Sample</display-name>
+	<description>Sample App</description>
+	<servlet>
+		<servlet-name>MyProfile</servlet-name>
+		<servlet-class>ProfileServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyProfile</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+</web-app>
