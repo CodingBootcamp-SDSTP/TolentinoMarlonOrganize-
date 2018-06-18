@@ -8,9 +8,12 @@ public class ProfileServlet extends HttpServlet
 	}
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<h1>Hello, Welcome to your Profile</h1>");
+		HttpSession session = request.getSession(true);
+		//This is just a dummy profile
+		session.setAttribute("age","25"); 
+		session.setAttribute("gender","Male"); 
+		session.setAttribute("address","Bulacan"); 
+		response.sendRedirect("profile.jsp");
 	}
 
 	public void destroy() {
