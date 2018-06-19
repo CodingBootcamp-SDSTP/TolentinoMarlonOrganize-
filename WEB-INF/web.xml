@@ -1,13 +1,29 @@
 <?xml version="1.0" ?>
 <web-app>
-	<display-name>Servlet Sample</display-name>
-	<description>Sample App</description>
+	<display-name>Organize App</display-name>
+	<description>Organize</description>
 	<servlet>
-		<servlet-name>MyProfile</servlet-name>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Profile</servlet-name>
 		<servlet-class>ProfileServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>MyProfile</servlet-name>
+		<servlet-name>Profile</servlet-name>
 		<url-pattern>/profile</url-pattern>
 	</servlet-mapping>
 </web-app>
