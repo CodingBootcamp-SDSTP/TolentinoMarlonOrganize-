@@ -13,20 +13,21 @@ public class LoginServlet extends HttpServlet
 	}
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-	try{
-		UserModel userModel = new UserModel();
-		userModel.setUsername(req.getParameter("un"));
-		userModel.setPassword(req.getParameter("pw"));
-		userModel = ud.login(userModel);
-		if(userModel.isValid()) {
-		HttpSession session = req.getSession(true);
-		session.setAttribute("currentSessionUser",(String) userModel.getUsername()); 
-		res.sendRedirect("userLogged.jsp");
-	 	}
-	 	else {
-		  res.sendRedirect("error.jsp"); 
+		try{
+			UserModel userModel = new UserModel();
+			userModel.setUsername(req.getParameter("un"));
+			userModel.setPassword(req.getParameter("pw"));
+			userModel = ud.login(userModel);
+			if(userModel.isValid()) {
+				HttpSession session = req.getSession(true);
+				session.setAttribute("currentSessionUser",(String) userModel.getUsername()); 
+				res.sendRedirect("userLogged.jsp");
+			}
+			else {
+				res.sendRedirect("error.jsp"); 
+			}
 		}
-		catch (Throwable theException) {
+		catch(Throwable theException) {
 			System.out.println(theException); 
 		}
 	}

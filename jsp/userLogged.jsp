@@ -11,6 +11,6 @@
 		<% String currentUser = (String) session.getAttribute("currentSessionUser");%>
 		Welcome <%= currentUser %> !!!!!!
 	</center>
-	<a href="/moneymaker/profile">My Profile</a>
+	<a href="/organize/profile">My Profile</a>
 	</body>
 </html>

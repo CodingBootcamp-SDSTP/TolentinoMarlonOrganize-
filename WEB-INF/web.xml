@@ -2,14 +2,14 @@
 <web-app>
 	<display-name>Organize App</display-name>
 	<description>Organize</description>
-	<servlet>
+	<!-- <servlet>
 		<servlet-name>Home</servlet-name>
 		<servlet-class>HomeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Home</servlet-name>
 		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 	<servlet>
 		<servlet-name>Login</servlet-name>
 		<servlet-class>LoginServlet</servlet-class>
@@ -26,4 +26,13 @@
 		<servlet-name>Profile</servlet-name>
 		<url-pattern>/profile</url-pattern>
 	</servlet-mapping>
+		<servlet>
+		<servlet-name>URL</servlet-name>
+		<servlet-class>URLServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>URL</servlet-name>
+		<url-pattern>/urls</url-pattern>
+	</servlet-mapping>
+
 </web-app>

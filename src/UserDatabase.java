@@ -75,7 +75,6 @@ public class UserDatabase
 			try { if(stmt != null) {stmt = null;}} catch(Exception e) {};
 			try { if(rs != null) {rs = null;}} catch(Exception e) {};
 		}
-
 		um.setValid(v);
 		return(um);
 	}
