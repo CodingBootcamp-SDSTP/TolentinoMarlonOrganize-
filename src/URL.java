@@ -49,12 +49,4 @@ public class URL
 	public int getCounter() {
 		return(counter);
 	}
-
-	// public String toString() {
-	// 	return("ID: " + ID + ", User: " + username + ", Password: " + password);
-	// }
-
-	// public String getDetails() {
-	// 	return(ID + "@" + username + "@" + password + "@user");
-	// }
 }

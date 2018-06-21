@@ -14,7 +14,6 @@ public class ProfileServlet extends HttpServlet
 		res.setContentType("text/html");
 		HttpSession session = req.getSession(true);
 		PrintWriter out = res.getWriter();
-		out.print("<p><a href='/organize/urls'>Click here to display all urls</a></p>");
 		res.sendRedirect("profile.jsp");
 	}
 
@@ -35,9 +34,6 @@ public class ProfileServlet extends HttpServlet
 			e.printStackTrace();
 		}
 		return(f);
-	}
-
-	public void writeHTML() {
 	}
 
 	public void destroy() {

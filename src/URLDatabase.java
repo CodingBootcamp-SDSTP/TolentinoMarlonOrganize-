@@ -8,13 +8,14 @@ import java.sql.*;
 public class URLDatabase
 {
 	private URLCollection uc;
+	private SQLConnection sc;
 	Connection conn;
 
 	public URLDatabase() {
 		uc = new URLCollection();
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/urlcollectiondb?user=marlont&password=tolentino&serverTimezone=UTC&useSSL=false");
+			sc = SQLConnection.instance();
+			conn = sc.getConnection();
 			readFromSQL(conn);
 		}
 		catch(Exception e) {
@@ -55,8 +56,6 @@ public class URLDatabase
 	}
 
 	public void createObject(String... details) {
-		int len = details.length - 1;
-		// String d = details[len];
 		URL url = new URL(details[0], details[1], details[2], details[3]);
 		uc.addURL(url);
 	}
